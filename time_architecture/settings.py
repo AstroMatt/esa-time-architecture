@@ -119,3 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+from django.utils.translation import ugettext_lazy as _
+from django.contrib import admin
+admin.site.site_header = _('Time Architecture')
+admin.site.index_title = _('Control Panel')
+admin.site.site_title = _('Time Architecture Control Panel')

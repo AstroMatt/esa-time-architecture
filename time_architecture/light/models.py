@@ -1,3 +1,5 @@
+import datetime
+
 from django.core.validators import MaxValueValidator
 from django.core.validators import MinValueValidator
 from django.db import models
@@ -17,7 +19,6 @@ class LED(models.Model):
         ('UVA2', _('UVA2 415nm')),
         ('UVA3', _('UVA3 495nm')),
         ('IR', _('IR 740nm')),
-        #('White', _('White')),
         ('Red', _('Red'))]
 
     box = PositiveSmallIntegerField(
@@ -32,130 +33,139 @@ class LED(models.Model):
         db_index=True)
 
     hour_00 = PositiveSmallIntegerField(
-        verbose_name=_('00:00 - 00:59'),
+        verbose_name=_('00'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>00:00 - 00:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
 
     hour_01 = PositiveSmallIntegerField(
-        verbose_name=_('01:00 - 01:59'),
+        verbose_name=_('01'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>01:00 - 01:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
     hour_02 = PositiveSmallIntegerField(
-        verbose_name=_('02:00 - 02:59'),
+        verbose_name=_('02'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>02:00 - 02:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
     hour_03 = PositiveSmallIntegerField(
-        verbose_name=_('03:00 - 03:59'),
+        verbose_name=_('03'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>03:00 - 03:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
     hour_04 = PositiveSmallIntegerField(
-        verbose_name=_('04:00 - 04:59'),
+        verbose_name=_('04'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>04:00 - 04:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
     hour_05 = PositiveSmallIntegerField(
-        verbose_name=_('05:00 - 05:59'),
+        verbose_name=_('05'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>05:00 - 05:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
     hour_06 = PositiveSmallIntegerField(
-        verbose_name=_('06:00 - 06:59'),
+        verbose_name=_('06'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>06:00 - 06:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
     hour_07 = PositiveSmallIntegerField(
-        verbose_name=_('07:00 - 07:59'),
+        verbose_name=_('07'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>07:00 - 07:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
     hour_08 = PositiveSmallIntegerField(
-        verbose_name=_('08:00 - 08:59'),
+        verbose_name=_('08'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
-        help_text=_('[0-100]% Percent of LED power'),
+        help_text=_('<strong>09:00 - 09:59</strong> - Percent of LED power <strong>[0-100]</strong>%'),
         default=0)
     hour_09 = PositiveSmallIntegerField(
-        verbose_name=_('09:00 - 09:59'),
+        verbose_name=_('09'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_10 = PositiveSmallIntegerField(
-        verbose_name=_('10:00 - 10:59'),
+        verbose_name=_('10'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_11 = PositiveSmallIntegerField(
-        verbose_name=_('11:00 - 11:59'),
+        verbose_name=_('11'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_12 = PositiveSmallIntegerField(
-        verbose_name=_('12:00 - 12:59'),
+        verbose_name=_('12'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_13 = PositiveSmallIntegerField(
-        verbose_name=_('13:00 - 13:59'),
+        verbose_name=_('13'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_14 = PositiveSmallIntegerField(
-        verbose_name=_('14:00 - 14:59'),
+        verbose_name=_('14'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_15 = PositiveSmallIntegerField(
-        verbose_name=_('15:00 - 15:59'),
+        verbose_name=_('15'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_16 = PositiveSmallIntegerField(
-        verbose_name=_('16:00 - 16:59'),
+        verbose_name=_('16'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_17 = PositiveSmallIntegerField(
-        verbose_name=_('17:00 - 17:59'),
+        verbose_name=_('17'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_18 = PositiveSmallIntegerField(
-        verbose_name=_('18:00 - 18:59'),
+        verbose_name=_('18'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_19 = PositiveSmallIntegerField(
-        verbose_name=_('19:00 - 19:59'),
+        verbose_name=_('19'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_20 = PositiveSmallIntegerField(
-        verbose_name=_('20:00 - 20:59'),
+        verbose_name=_('20'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_21 = PositiveSmallIntegerField(
-        verbose_name=_('21:00 - 21:59'),
+        verbose_name=_('21'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_22 = PositiveSmallIntegerField(
-        verbose_name=_('22:00 - 22:59'),
+        verbose_name=_('22'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
     hour_23 = PositiveSmallIntegerField(
-        verbose_name=_('23:00 - 23:59'),
+        verbose_name=_('23'),
         validators=[MaxValueValidator(100), MinValueValidator(0)],
         help_text=_('[0-100]% Percent of LED power'),
         default=0)
 
-    def __str__(self):
-        return f'Box {self.box} - Diode {self.name}'
-
     class Meta:
+        ordering = ['box', 'name']
         verbose_name = _('LED')
         verbose_name_plural = _('LEDs')
+
+    def __str__(self):
+        return f'Box {self.box} - {self.name}'
+
+    def current_power(self):
+        hour = datetime.datetime.now().hour
+        power = getattr(self, f'hour_{hour:02d}')
+        return {
+            'box': self.box,
+            'name': self.name,
+            'power': power}

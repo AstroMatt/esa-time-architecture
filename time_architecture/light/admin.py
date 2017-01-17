@@ -9,6 +9,7 @@ class LEDAdmin(admin.ModelAdmin):
     search_fields = ['^name']
     readonly_fields = ['box', 'name']
     ordering = ['box', 'name']
+    change_list_filter_template = 'admin/filter_listing.html'
 
     def title(self, obj):
         return obj.__str__().replace(' ', '&nbsp;')

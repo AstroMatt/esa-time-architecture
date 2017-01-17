@@ -17,3 +17,6 @@ class LEDAdmin(admin.ModelAdmin):
         return obj.__str__().replace(' ', '&nbsp;')
 
     title.allow_tags = True
+
+    class Media:
+        css = {'all': ['light/css/hide-actions.css']}

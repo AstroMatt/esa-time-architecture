@@ -17,7 +17,3 @@ class LEDAdmin(admin.ModelAdmin):
         return obj.__str__().replace(' ', '&nbsp;')
 
     title.allow_tags = True
-
-    class Media:
-        js = ['light/js/edit-inline.js']
-        css = {'all': ['light/css/edit-inline.css']}

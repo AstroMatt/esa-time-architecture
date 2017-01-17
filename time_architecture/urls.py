@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import include
 from django.conf.urls import url
 from django.contrib import admin
+from django.views.generic import RedirectView
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^lightning/', include('time_architecture.light.urls'))
+    url(r'^lightning/', include('time_architecture.light.urls')),
+    url(r'^', RedirectView.as_view(permanent=False, url='/admin/light/led/')),
 ]
